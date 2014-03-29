@@ -10,9 +10,10 @@ Using CakePHP's latest stable build, Stripe's PHP library - https://github.com/s
 1. Fork this repository
 2. Create a branch with your name
 3. Add whatever code is necessary to make your application match the challenge immediately above. There is no time limit for solving this problem.
+4. Make sure to commit your database.
 5. When you have made your final commit, submit your code by sending a pull request to this repository.  Also send an email to andre@orainteractive.com to notify of your completion.
 
 ## Additional Functionality
-1. Install packages with composer
-2. Install and use the Environment Manager plugin - https://github.com/asugai/CakePHP-Environment-Manager - and setup your local environment through it
-3. Install and use the Notification Manager plugin - https://github.com/asugai/CakePHP-Notification-Manager - and send an email to the new user using the NotificationUtility library
+1. Install packages with composer.
+2. Install and use the Environment Manager plugin - https://github.com/asugai/CakePHP-Environment-Manager - and setup your local environment through it.
+3. Install and use the Notification Manager plugin - https://github.com/asugai/CakePHP-Notification-Manager - and send an email to the new user using the NotificationUtility library.
