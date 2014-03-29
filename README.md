@@ -6,6 +6,8 @@ Many applications require that credit cards be accepted. Security for this infor
 ## Challenge
 Using CakePHP's latest stable build - http://cakephp.org - Stripe's PHP - https://github.com/stripe/stripe-php - and JS - https://stripe.com/docs/stripe.js - libraries and our Payment Manager plugin - https://github.com/asugai/CakePHP-Payment-Manager - create a single page that will register a user and allow the user to enter a credit card at the same time. The user should have the following fields: first name, last name, email. The credit card should have: card number, expiration date, cvv2/cvc2.
 
+This user and the credit card information associated with it should be saved to a database.
+
 Make all fields required and errors should be displayed to the user, especially errors with the credit card.
 
 ## Requirements
