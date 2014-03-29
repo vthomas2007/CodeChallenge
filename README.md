@@ -8,6 +8,7 @@ Using CakePHP's latest stable build, Stripe's PHP library - https://github.com/s
 
 ## Requirements
 1. Fork this repository
+2. Register for a free stripe.com account and use the sk\_test and pk\_test keys in the application
 2. Create a branch with your name
 3. Add whatever code is necessary to make your application match the challenge immediately above. There is no time limit for solving this problem.
 4. Make sure to commit your database.
