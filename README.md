@@ -1,4 +1,5 @@
-Registration with Credit Card - Coding Challenge
+Registration with Credit Card
+Coding Challenge
 ==================
 ## Inspiration
 Many applications require that credit cards be accepted. Security for this information is of the upmost importance. Most user flows will allow for the creation of a user and of credit cards separately, but sometimes, an application requires that both be submitted at the same time.
