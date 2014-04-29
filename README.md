@@ -4,9 +4,9 @@ Code Challenge: Registration with Credit Card
 Many applications require that credit cards be accepted. Security for this information is of the upmost importance. Most user flows will allow for the creation of a user and of credit cards separately, but sometimes, an application requires that both be submitted at the same time.
 
 ## Challenge
-Using CakePHP's latest stable build - http://cakephp.org - Stripe's PHP - https://github.com/stripe/stripe-php - and JS - https://stripe.com/docs/stripe.js - libraries and our Payment Manager plugin - https://github.com/asugai/CakePHP-Payment-Manager - create a single page that will register a user and allow the user to enter a credit card at the same time. The user should have the following fields: first name, last name, email, and password. The credit card should have: card number, expiration date, cvv2/cvc2.
+Using CakePHP's latest stable build - http://cakephp.org - Stripe's PHP - https://github.com/stripe/stripe-php - and JS - https://stripe.com/docs/stripe.js - libraries and our Payment Manager plugin - https://github.com/asugai/CakePHP-Payment-Manager - create a single page that will register a user and allow the user to enter a credit card at the same time. The user form should have the following fields: first name, last name, email, and password. The credit card form should have: card number, expiration date, cvv2/cvc2.
 
-This user and the credit card information associated with it should be saved to a database.
+This user and the credit card information associated with it should be saved to a database - not all fields need to be saved, only those that are required for the user and for us to get enough information to charge that same credit card later using stripe.
 
 Make all fields required and errors should be displayed to the user, especially errors with the credit card.
 
