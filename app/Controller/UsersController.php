@@ -18,9 +18,7 @@ class UsersController extends AppController {
             );
             
             $this->User->create();
-            $this->request->data['User']['password'] = Security::hash($this->request->data['User']['password']);
             $this->User->set('stripe_customer_id', $stripeCustomer["id"]);
-            //$this->User->set('password', $hashedPassword);
             $this->User->save($this->request->data);
             $this->Session->setFlash(__('Thank you for signing up!'));
             return $this->redirect(array('action' => 'view', $this->User->field('id')));
