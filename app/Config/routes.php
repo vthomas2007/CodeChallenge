@@ -30,7 +30,7 @@
  */
 	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
 
-    Router::connect('/payment_form/', array('controller' => 'pages', 'action' => 'paymentForm'));
+    Router::connect('/signup', array('controller' => 'users', 'action' => 'add'));
     
 /**
  * Load all plugin routes. See the CakePlugin documentation on
