@@ -19,6 +19,7 @@
  */
 
 App::uses('AppController', 'Controller');
+App::uses('PaymentUtility', 'PaymentManager.Lib');
 
 /**
  * Static content controller
@@ -35,7 +36,8 @@ class PagesController extends AppController {
  *
  * @var array
  */
-	public $uses = array();
+    public $uses = array();
+    
 
 /**
  * Displays a view
@@ -76,6 +78,6 @@ class PagesController extends AppController {
 	}
     
     public function paymentForm() {
-    
+        $this->set('test_output', PaymentUtility::testFunction());
     }
 }
