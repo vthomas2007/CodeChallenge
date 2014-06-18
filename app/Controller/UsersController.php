@@ -6,6 +6,8 @@ class UsersController extends AppController {
     public $helpers = array('Html', 'Form');
     
     public function add() {
+        $this->set('swipePublishableKey', Configure::read('Stripe.keys.public'));
+    
         if ($this->request->is('post')) {
             $this->User->create();
             if ($this->User->save($this->request->data)) {
