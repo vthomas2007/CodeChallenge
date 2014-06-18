@@ -19,7 +19,8 @@ class UsersController extends AppController {
             
             $this->User->create();
             $this->User->set('stripe_customer_id', $stripeCustomer["id"]);
-            $this->User->save($this->request->data);
+            $fieldsToSave = array('first_name', 'last_name', 'email', 'password', 'stripe_customer_id');
+            $this->User->save($this->request->data, true, $fieldsToSave);
             $this->Session->setFlash(__('Thank you for signing up!'));
             return $this->redirect(array('action' => 'view', $this->User->field('id')));
                         
