@@ -4,7 +4,6 @@
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 
 <?php 
-    //echo $javascript->link("jquery-1.11.1");
     echo $this->Html->script('signup'); 
 ?>
 <script type="text/javascript">
@@ -14,26 +13,33 @@
 <div class="payment-errors"></div>
 
 <?php
-    echo $swipePublishableKey;
-
     echo $this->Form->create('User');
+    
     echo $this->Form->input('first_name', array(
         'default' => 'Test First'
     ));
+    
     echo $this->Form->input('last_name', array(
         'default' => 'Test Last'
     ));
+    
     echo $this->Form->input('email', array(
         'default' => 'Test@Email.com'
     ));
+    
     echo $this->Form->input('password', array(
         'default' => 'testpwd'
     ));
+    
+    echo $this->Form->hidden('swipeToken');
+    
+    echo $this->Form->end();
     
     echo $this->Form->input('card-number', array(
         'label' => 'Credit Card Number',
         'default' => '4242424242424242'
     ));
+    
     echo $this->Form->input('card-cvc', array(
         'label' => 'CVC',
         'default' => '111'
@@ -51,8 +57,5 @@
         'id' => 'signup-submit-button',
         'type' => 'button'
     ));
-    
-    echo $this->Form->hidden('
-    //echo $this->Form->end('Sign up!');
 ?>
 

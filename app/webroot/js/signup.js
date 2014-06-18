@@ -10,13 +10,14 @@ function configureSwipe(key) {
 
 function validateCardInformation() {
 
+    // TODO: Pass this from the server
     Stripe.setPublishableKey('pk_test_Nc0HNVwoeOQS7HGsGaLu6DBv');
 
     Stripe.card.createToken({
-        number: $('#UserCard-number').val(),
-        cvc: $('#UserCard-cvc').val(),
-        exp_month: $('#UserCard-expiry-month').val(),
-        exp_year: $('#UserCard-year').val(),
+        number: $('#card-number').val(),
+        cvc: $('#card-cvc').val(),
+        exp_month: $('#card-expiry-month').val(),
+        exp_year: $('#card-year').val(),
     }, submitFormIfValid);
 }
 
@@ -27,7 +28,6 @@ function submitFormIfValid(status, response) {
     else {
         setTokenField(response['id']);
         submitSignupForm();
-        alert("Success!  Token: " + response['id']);
     }
 }
 
@@ -37,9 +37,9 @@ function displayCreditCardErrors(errors)
 }
 
 function setTokenField(token) {
-
+    $('#UserSwipeToken').val(token);
 }
 
 function submitSignupForm() {
-
+    $('#UserAddForm').submit();
 }

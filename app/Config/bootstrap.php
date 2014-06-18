@@ -70,7 +70,7 @@ Cache::config('default', array('engine' => 'File'));
  *
  */
 
-  CakePlugin::load('PaymentManager');
+CakePlugin::load('PaymentManager');
  
 /**
  * You can attach event listeners to the request lifecycle as Dispatcher Filter. By default CakePHP bundles two filters:
@@ -109,14 +109,17 @@ CakeLog::config('error', array(
 	'file' => 'error',
 ));
 
+
 Configure::write('Stripe.test.secret', 'sk_test_mnURHP8xe04inGZT6WUe8UmD');
 Configure::write('Stripe.test.public', 'pk_test_Nc0HNVwoeOQS7HGsGaLu6DBv');
 
-Configure::write('Stripe.live.secret', ''); //Intetionally left blank for now
-Configure::write('Stripe.live.public', '');
+Configure::write('Stripe.live.secret', 'sk_test_mnURHP8xe04inGZT6WUe8UmD'); //Intentionally left blank for now
+Configure::write('Stripe.live.public', 'pk_test_Nc0HNVwoeOQS7HGsGaLu6DBv');
 
 if (class_exists('EnvironmentUtility') && EnvironmentUtility::is('production')) {
     Configure::write('Stripe.keys', Configure::read('Stripe.live'));
 } else {
     Configure::write('Stripe.keys', Configure::read('Stripe.test'));
 }
+
+require APP . 'Plugin' . DS . 'PaymentManager' . DS . 'Lib' . DS . 'PaymentUtility.php';
