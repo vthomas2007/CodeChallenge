@@ -61,6 +61,10 @@ class User extends AppModel {
             'emailCharacterLimit' => array(
                 'rule' => array('maxLength', 255),
                 'message' => 'The email address you have entered is too long'
+            ),
+            'emailIsUnique' => array(
+                'rule' => 'isUnique',
+                'message' => 'The email address is already in use.'
             )
         ),
         'password' => array(
