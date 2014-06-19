@@ -19,7 +19,6 @@ class User extends AppModel {
         return true;
     }
     
-    
     public $validate = array(
         'first_name' => array(
             'firstNameNotEmpty' => array(

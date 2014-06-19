@@ -15,35 +15,30 @@
 <?php
     echo $this->Form->create('User');
     
-    echo $this->Form->input('first_name', array(
-        'default' => 'Test First'
-    ));
+    echo $this->Form->input('first_name');
     
-    echo $this->Form->input('last_name', array(
-        'default' => 'Test Last'
-    ));
+    echo $this->Form->input('last_name');
     
-    echo $this->Form->input('email', array(
-        'default' => 'Test@Email.com'
-    ));
+    echo $this->Form->input('email');
     
-    echo $this->Form->input('password', array(
-        'default' => 'testpwd'
-    ));
+    echo $this->Form->input('password');
     
     echo $this->Form->hidden('swipeToken');
     
     echo $this->Form->end();
     
+    // Keep CC default for testing purposes
     echo $this->Form->input('card-number', array(
         'label' => 'Credit Card Number',
         'default' => '4242424242424242'
     ));
     
+    // Keep CC default for testing purposes
     echo $this->Form->input('card-cvc', array(
         'label' => 'CVC',
         'default' => '111'
     ));
+    
     echo $this->Form->month('card-expiration-month', array(
         'label' => 'Exp Month',
         'default' => date('m'),

@@ -26,16 +26,7 @@ class UsersController extends AppController {
                 return $this->redirect(array('action' => 'view', $this->User->field('id')));
             }
               
-
-            $this->Session->setFlash(__('There were errors signing up.'));
-            /*
-            if ($this->User->save($this->request->data)) {
-                $this->Session->setFlash(__('Welcome!'));
-                return $this->redirect(array('action', 'add'));
-            }
-            $this->Session->setFlash(__('There were errors signing up.'));
-            */
-            
+            $this->Session->setFlash(__('There were errors signing up.'));           
         }
     }
     
