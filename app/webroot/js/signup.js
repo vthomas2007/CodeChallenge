@@ -16,14 +16,14 @@ function validateCardInformation() {
     Stripe.card.createToken({
         number: $('#card-number').val(),
         cvc: $('#card-cvc').val(),
-        exp_month: $('#card-expiry-month').val(),
-        exp_year: $('#card-year').val(),
+        exp_month: parseInt($('#card-expiration-month').val()),
+        exp_year: $('#card-expiration-yearYear').val(), // For some reason, the 'month' id changes, but not 'year'
     }, submitFormIfValid);
 }
 
 function submitFormIfValid(status, response) {
     if (response.error) {
-        displayCreditCardErrors(response.error.messages);
+        displayCreditCardErrors(response.error.message);
     }
     else {
         setTokenField(response['id']);
