@@ -27,8 +27,6 @@
     
     echo $this->Form->end();
     
-    //echo "<form>";
-    
     echo $this->Form->create('CreditCard');
     
     // Keep CC default for testing purposes
@@ -43,6 +41,7 @@
         'default' => '111'
     ));
     
+    // TODO: Time permitting, fix default month issue
     echo $this->Form->input('card-expiration-month', array(
         'label' => 'Exp Month',
         'type' => 'date',
@@ -70,6 +69,5 @@
     ));
     
     echo $this->Form->end();
-    //echo "</form>";
 ?>
 
