@@ -14,10 +14,10 @@ function validateCardInformation() {
     Stripe.setPublishableKey('pk_test_Nc0HNVwoeOQS7HGsGaLu6DBv');
 
     Stripe.card.createToken({
-        number: $('#card-number').val(),
-        cvc: $('#card-cvc').val(),
-        exp_month: parseInt($('#card-expiration-month').val()),
-        exp_year: $('#card-expiration-yearYear').val(), // For some reason, the 'month' id changes, but not 'year'
+        number: $('#CreditCardCard-number').val(),
+        cvc: $('#CreditCardCard-cvc').val(),
+        exp_month: parseInt($('#card-expiration-monthMonth').val()), // Cake adds 'Month' to the user defined id
+        exp_year: $('#card-expiration-yearYear').val(),              // Cake adds 'Year' to the user defined id
     }, submitFormIfValid);
 }
 

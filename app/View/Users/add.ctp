@@ -27,6 +27,10 @@
     
     echo $this->Form->end();
     
+    //echo "<form>";
+    
+    echo $this->Form->create('CreditCard');
+    
     // Keep CC default for testing purposes
     echo $this->Form->input('card-number', array(
         'label' => 'Credit Card Number',
@@ -39,11 +43,13 @@
         'default' => '111'
     ));
     
-    echo $this->Form->month('card-expiration-month', array(
+    echo $this->Form->input('card-expiration-month', array(
         'label' => 'Exp Month',
+        'type' => 'date',
+        'dateFormat' => 'M',
         'default' => date('m'),
         'monthNames' => false,
-        'id' => 'card-expiration-month'
+        'id' => 'card-expiration-month',
     ));
     
     // According to some blogger, the reverse order of years that are
@@ -62,5 +68,8 @@
         'id' => 'signup-submit-button',
         'type' => 'button'
     ));
+    
+    echo $this->Form->end();
+    //echo "</form>";
 ?>
 
