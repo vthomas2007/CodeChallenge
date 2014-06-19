@@ -20,10 +20,14 @@ class UsersController extends AppController {
             $this->User->create();
             $this->User->set('stripe_customer_id', $stripeCustomer["id"]);
             $fieldsToSave = array('first_name', 'last_name', 'email', 'password', 'stripe_customer_id');
-            $this->User->save($this->request->data, true, $fieldsToSave);
-            $this->Session->setFlash(__('Thank you for signing up!'));
-            return $this->redirect(array('action' => 'view', $this->User->field('id')));
-                        
+            if ($this->User->save($this->request->data, true, $fieldsToSave))
+            {
+                $this->Session->setFlash(__('Thank you for signing up!'));
+                return $this->redirect(array('action' => 'view', $this->User->field('id')));
+            }
+              
+
+            $this->Session->setFlash(__('There were errors signing up.'));
             /*
             if ($this->User->save($this->request->data)) {
                 $this->Session->setFlash(__('Welcome!'));
